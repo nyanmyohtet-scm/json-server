@@ -2,7 +2,29 @@
   "posts": [
     {
       "id": 1,
-      "title": "json-server"
+      "title": "updated"
+    },
+    {
+      "id": 2,
+      "title": "Post 02"
+    },
+    {
+      "title": "Lorem...",
+      "created_at": 1646755247279,
+      "id": 3
+    },
+    {
+      "title": "Lorem...",
+      "created_at": 1646755264409,
+      "id": 4
+    }
+  ],
+  "users": [
+    {
+      "email": "olivier@mail.com",
+      "password": "$2a$10$G8q94FRn7IdcSmyf8qau3.bt0feKs7a4ND5eBBTlR8aAJn0vrzXWW",
+      "created_at": 1646754723370,
+      "id": 1
     }
   ]
 }

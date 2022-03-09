@@ -1,13 +1,22 @@
 // server.js
 const path = require('path')
+// var auth = require("./auth.js")();
 const jsonServer = require('json-server')
+const auth = require('json-server-auth')
 const server = jsonServer.create()
 const router = jsonServer.router(path.join(__dirname, 'db.json'))
 const middlewares = jsonServer.defaults()
 
+const PORT_NUMBER = 5000
+
+// /!\ Bind the router db to the app
+server.db = router.db
+
 // To handle POST, PUT and PATCH you need to use a body-parser
 // You can use the one used by JSON Server
 server.use(jsonServer.bodyParser)
+
+// Append created_at to request body
 server.use((req, res, next) => {
   if (req.method === 'POST') {
     req.body.created_at = Date.now()
@@ -16,8 +25,37 @@ server.use((req, res, next) => {
   next()
 })
 
+// Custom middleware example
+// server.use((req, res, next) => {
+//   res.header('X-Hello', 'World')
+//   next()
+// })
+
+/**
+ * We add 4 for read permission.
+ * We add 2 for write permission.
+ *
+ * First digit are the permissions for the `resource owner`.
+ * Second digit are the permissions for the `logged-in users`.
+ * Third digit are the permissions for the `public users`.
+ */
+const rules = auth.rewriter({
+  // Permission rules
+  users: 600, // rwx
+  posts: 664, // 421
+  // Other rules
+  // '/posts/:category': '/posts?category=:category',
+})
+
+// You must apply the middlewares in the following order
+server.use(rules)
 server.use(middlewares)
+
+// You must apply the auth middleware before the router
+server.use(auth)
 server.use(router)
-server.listen(3000, () => {
-  console.log('JSON Server is running')
+
+// Listern API request form client at given port number
+server.listen(PORT_NUMBER, () => {
+  console.log(`JSON Server is running at ${PORT_NUMBER}`)
 })
