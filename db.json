@@ -1,29 +1,141 @@
 {
   "posts": [
     {
-      "id": 1,
-      "title": "updated"
+      "title": "Post 01",
+      "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+      "status": 1,
+      "created_user_id": 1,
+      "updated_user_id": 1,
+      "deleted_user_id": null,
+      "deleted_at": null,
+      "created_at": 1646832501074,
+      "updated_at": 1646832501074,
+      "id": 1
     },
     {
-      "id": 2,
-      "title": "Post 02"
+      "title": "Post 02",
+      "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+      "status": 1,
+      "created_user_id": 1,
+      "updated_user_id": 1,
+      "deleted_user_id": null,
+      "deleted_at": null,
+      "created_at": 1646875081925,
+      "updated_at": 1646875081925,
+      "id": 2
     },
     {
-      "title": "Lorem...",
-      "created_at": 1646755247279,
+      "title": "Post 03",
+      "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+      "status": 1,
+      "created_user_id": 1,
+      "updated_user_id": 1,
+      "deleted_user_id": null,
+      "deleted_at": null,
+      "created_at": 1646875088333,
+      "updated_at": 1646875088333,
       "id": 3
     },
     {
-      "title": "Lorem...",
-      "created_at": 1646755264409,
+      "title": "Post 04",
+      "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+      "status": 1,
+      "created_user_id": 1,
+      "updated_user_id": 1,
+      "deleted_user_id": null,
+      "deleted_at": null,
+      "created_at": 1646875093176,
+      "updated_at": 1646875093176,
       "id": 4
+    },
+    {
+      "title": "Post 05",
+      "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+      "status": 1,
+      "created_user_id": 1,
+      "updated_user_id": 1,
+      "deleted_user_id": null,
+      "deleted_at": null,
+      "created_at": 1646875095617,
+      "updated_at": 1646875095617,
+      "id": 5
+    },
+    {
+      "title": "Post 06",
+      "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+      "status": 1,
+      "created_user_id": 1,
+      "updated_user_id": 1,
+      "deleted_user_id": null,
+      "deleted_at": null,
+      "created_at": 1646875099041,
+      "updated_at": 1646875099041,
+      "id": 6
+    },
+    {
+      "title": "Post 07",
+      "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+      "status": 1,
+      "created_user_id": 1,
+      "updated_user_id": 1,
+      "deleted_user_id": null,
+      "deleted_at": null,
+      "created_at": 1646875101829,
+      "updated_at": 1646875101829,
+      "id": 7
+    },
+    {
+      "title": "Post 08",
+      "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+      "status": 1,
+      "created_user_id": 1,
+      "updated_user_id": 1,
+      "deleted_user_id": null,
+      "deleted_at": null,
+      "created_at": 1646875107904,
+      "updated_at": 1646875107904,
+      "id": 8
+    },
+    {
+      "title": "Post 09",
+      "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+      "status": 1,
+      "created_user_id": 1,
+      "updated_user_id": 1,
+      "deleted_user_id": null,
+      "deleted_at": null,
+      "created_at": 1646875110707,
+      "updated_at": 1646875110707,
+      "id": 9
+    },
+    {
+      "title": "Post 10",
+      "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+      "status": 1,
+      "created_user_id": 1,
+      "updated_user_id": 1,
+      "deleted_user_id": null,
+      "deleted_at": null,
+      "created_at": 1646875113138,
+      "updated_at": 1646875113138,
+      "id": 10
     }
   ],
   "users": [
     {
-      "email": "olivier@mail.com",
-      "password": "$2a$10$G8q94FRn7IdcSmyf8qau3.bt0feKs7a4ND5eBBTlR8aAJn0vrzXWW",
-      "created_at": 1646754723370,
+      "email": "admin@example.com",
+      "password": "$2a$10$IFUEO4WxZiySnyHeoQEyIOVcUx2G1KJrVlRMc1aj7IyZhALw3TmQW",
+      "name": "Admin",
+      "type": 0,
+      "phone": "0912345678989",
+      "address": "Yangon",
+      "dob": 1646832012308,
+      "created_user_id": 0,
+      "updated_user_id": 0,
+      "deleted_user_id": null,
+      "deleted_at": null,
+      "created_at": 1646832055442,
+      "updated_at": 1646832055442,
       "id": 1
     }
   ]
