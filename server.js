@@ -7,7 +7,7 @@ const server = jsonServer.create()
 const router = jsonServer.router(path.join(__dirname, 'db.json'))
 const middlewares = jsonServer.defaults()
 
-const PORT_NUMBER = 5000
+const PORT_NUMBER = 8000
 
 // /!\ Bind the router db to the app
 server.db = router.db

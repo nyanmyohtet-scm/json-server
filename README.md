@@ -17,7 +17,7 @@ Start JSON-Server:
 npm run serve
 ```
 
-JSON-SERVER is running at http://localhost:5000
+JSON-SERVER is running at http://localhost:8000
 
 ## Admin Account Info
 
