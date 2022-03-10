@@ -1,5 +1,8 @@
 # json-server
+
 JSON API for Bulletin Board
+
+Home Page: https://github.com/typicode/json-server
 
 ## Setup
 
@@ -18,6 +21,89 @@ npm run serve
 ```
 
 JSON-SERVER is running at http://localhost:8000
+
+## Route Table
+
+<ul>
+  <li>
+    <a href="posts">/posts</a>
+    <sup>10x</sup>
+  </li>
+  <li>
+    <a href="users">/users</a>
+    <sup>1x</sup>
+  </li>
+</ul>
+<p>
+  To access and modify resources, you can use any HTTP method:
+</p>
+<p>
+  <code>GET</code>
+  <code>POST</code>
+  <code>PUT</code>
+  <code>PATCH</code>
+  <code>DELETE</code>
+  <code>OPTIONS</code>
+</p>
+
+<hr>
+
+## Custom Routes
+
+<div>
+  <table>
+    <tbody><tr>
+        <td>/users*</td>
+        <td><code>⇢</code> /600/users$1</td>
+      </tr><tr>
+        <td>/posts*</td>
+        <td><code>⇢</code> /664/posts$1</td>
+      </tr><tr>
+        <td>/api/*</td>
+        <td><code>⇢</code> /$1</td>
+      </tr><tr>
+        <td>/:resource/:id/show</td>
+        <td><code>⇢</code> /:resource/:id</td>
+      </tr><tr>
+        <td>/:resource/create</td>
+        <td><code>⇢</code> /:resource</td>
+      </tr><tr>
+        <td>/:resource/:id/edit</td>
+        <td><code>⇢</code> /:resource/:id</td>
+      </tr><tr>
+        <td>/:resource/:id/delete</td>
+        <td><code>⇢</code> /:resource/:id</td>
+      </tr>
+      </tr><tr>
+        <td>/posts/1/show</td>
+        <td><code>⇢</code> /posts/1</td>
+      </tr><tr>
+        <td>/posts/create</td>
+        <td><code>⇢</code> /posts</td>
+      </tr><tr>
+        <td>/posts/1/edit</td>
+        <td><code>⇢</code> /posts/1</td>
+      </tr><tr>
+        <td>/posts/1/delete</td>
+        <td><code>⇢</code> /posts/1</td>
+      </tr>
+  </tbody></table>
+</div>
+
+## Permissions
+
+```javascript
+/**
+ * Permission rules
+ * Add 4 for read permission.
+ * Add 2 for write permission.
+ * Add 1 for execute permission.
+ *
+ * First digit are the permissions for the `resource owner`.
+ * Second digit are the permissions for the `logged-in users`.
+ * Third digit are the permissions for the `public users`.
+ */
+ ```
 
 ## Admin Account Info
 

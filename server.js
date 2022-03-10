@@ -33,8 +33,10 @@ server.use((req, res, next) => {
 // })
 
 /**
- * We add 4 for read permission.
- * We add 2 for write permission.
+ * Permission rules
+ * Add 4 for read permission.
+ * Add 2 for write permission.
+ * Add 1 for execute permission.
  *
  * First digit are the permissions for the `resource owner`.
  * Second digit are the permissions for the `logged-in users`.
@@ -45,6 +47,11 @@ const rules = auth.rewriter({
   users: 600, // rwx
   posts: 664, // 421
   // Other rules
+  '/api/*': '/$1', // rewirte '/api/*' to '/*'
+  '/:resource/:id/show': '/:resource/:id',
+  '/:resource/create': '/:resource',
+  '/:resource/:id/edit': '/:resource/:id',
+  '/:resource/:id/delete': '/:resource/:id',
   // '/posts/:category': '/posts?category=:category',
 })
 
